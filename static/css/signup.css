@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Libre-Franklin', sans-serif;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  background: #645bff;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+.container .registration{
+  display: none;
+}
+#check:checked ~ .registration{
+  display: block;
+}
+#check:checked ~ .login{
+  display: none;
+}
+#check{
+  display: none;
+}
+.container .form{
+  padding: 2rem;
+}
+.form header{
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+ .form input{
+   height: 60px;
+   width: 100%;
+   padding: 0 15px;
+   font-size: 17px;
+   margin-bottom: 1.3rem;
+   border: 1px solid #ddd;
+   border-radius: 6px;
+   outline: none;
+ }
+ .form input:focus{
+   box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+ }
+.form a{
+  font-size: 16px;
+  color: #645bff;
+  text-decoration: none;
+}
+.form a:hover{
+  text-decoration: underline;
+}
+.form input.button{
+  color: #fff;
+  background: #645bff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.7rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.form input.button:hover{
+  background: #645bff;
+}
+.signup{
+  font-size: 17px;
+  text-align: center;
+}
+.signup label{
+  color: #645bff;
+  cursor: pointer;
+}
+.signup label:hover{
+  text-decoration: underline;
+}
+#flash-messages {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.flash-messages {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.flash-messages li {
+    background-color: #f8d7da; /* Light red background color for error messages, you can customize this */
+    color: #721c24; /* Dark red text color for error messages, you can customize this */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb; /* Border color, you can customize this */
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Additional styles for success messages */
+.flash-messages li.success {
+    background-color: #d4edda; /* Light green background color for success messages, you can customize this */
+    color: #155724; /* Dark green text color for success messages, you can customize this */
+    border-color: #c3e6cb; /* Border color for success messages, you can customize this */
+}

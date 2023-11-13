@@ -1,0 +1,120 @@
+body {
+    color:#fff;
+    font-family: 'Libre Franklin', sans-serif;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+
+}
+* { color:#fff; text-decoration: none;}
+
+.container {
+    position: relative;
+    height: 100vh; /* Adjusted to use the full viewport height */
+    display: flex;
+    flex-direction: column; /* Added to align items vertically */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+
+    background: #121212;
+    background: linear-gradient(
+      135deg,
+      #121212 25%,
+      #1a1a1a 25%,
+      #1a1a1a 50%,
+      #121212 50%,
+      #121212 75%,
+      #1a1a1a 75%,
+      #1a1a1a
+    );
+    background-size: 40px 40px;
+    animation: move 4s linear infinite;
+}
+
+@keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 40px;
+    }
+}
+
+button {
+    --primary-color: #645bff;
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: row; /* Adjusted to align arrow horizontally */
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s background;
+    gap: 0.6em;
+    font-weight: bold;
+}
+
+h1, p, button {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    margin: 0 0 0.5em 0; /* Adjust the margin-bottom value as needed */
+
+}
+h1{
+    font-size: 3em; /* Adjust the font size as needed */
+
+}
+p{
+    font-size: 2em;
+}
+button{
+    font-size: 1.0em;
+}
+button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+}
+
+button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+    background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+    right: 0;
+}
