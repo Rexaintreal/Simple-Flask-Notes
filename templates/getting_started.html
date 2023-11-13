@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;300;400;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started</title>
+</head>
+<body>
+    <div id="flash-messages">
+      {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              <ul class="flash-messages">
+                  {% for message in messages %}
+                      <li>{{ message }}</li>
+                  {% endfor %}
+              </ul>
+          {% endif %}
+      {% endwith %}
+    </div>
+
+    <div class="container">
+      <input type="checkbox" id="check">
+      <div class="login form">
+        <header>Login</header>
+        <form method="post" action="{{ url_for('gettingstarted') }}">
+        <input type="text" name="email" placeholder="Enter your email">
+          <input type="password" name="password" placeholder="Enter your password">
+          <a href="#">Forgot password?</a>
+          <input type="submit" class="button" name="login" value="Login">
+        </form>
+        <div class="signup">
+          <span class="signup">Don't have an account?
+           <label for="check">Signup</label>
+          </span>
+        </div>
+      </div>
+      <div class="registration form">
+        <header>Signup</header>
+        <form method="post" action="{{ url_for('gettingstarted') }}">
+        <input type="text" name="email" placeholder="Enter your email">
+          <input type="password" name="password" placeholder="Create a password">
+          <input type="password" name="confirm_password" placeholder="Confirm your password">
+          <input type="submit" class="button" name="signup" value="Signup">
+        </form>
+        <div class="signup">
+          <span class="signup">Already have an account?
+           <label for="check">Login</label>
+          </span>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
