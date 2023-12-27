@@ -82,7 +82,7 @@ Feel free to explore, modify, and enhance the functionality of this notes web ap
 
 ### Author
 
-Object Tales was created by [Saurabh Tiwari](https://github.com/Rexaintreal). 
+Simple Flask Notes was created by [Saurabh Tiwari](https://github.com/Rexaintreal). 
 
 - [Email](mailto:saurabhtiwari7986@gmail.com)
 
@@ -95,6 +95,6 @@ Object Tales was created by [Saurabh Tiwari](https://github.com/Rexaintreal).
 - [Typing Speed Tester](https://github.com/Rexaintreal/TypingSpeedTester) - A Python Typing Speed Tester
 - [Movie Recommender](https://github.com/Rexaintreal/Movie-Recommender) - A Python Movie Recommender
 - [Password Generator](https://github.com/Rexaintreal/Password-Generator) - A Python Password Generator
-- [Object Tales](https://github.com/Rexaintreal/Object-Tales) - A Pythpn Image to Story Generator
+- [Object Tales](https://github.com/Rexaintreal/Object-Tales) - A Python Image to Story Generator
 - [Finance Manager](https://github.com/Rexaintreal/Finance-Manager) - A Flask WebApp to Moniter Savings
 - [Codegram](https://github.com/Rexaintreal/Codegram) - A Social Media Web App
